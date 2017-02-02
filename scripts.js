@@ -1,12 +1,9 @@
-//Global variables that query my buttons for later use in my functions as well as my random number variable.
-
 var guessBtn = document.querySelector('#numSubmit');
 var clearBtn = document.querySelector('#numClear');
 var userGuess = document.querySelector('#numInput');
 var gameReset = document.querySelector('#gameReset');
 var randNumb = getRandomNumber(1,100);
 
-//Functions that enable/disable all buttons and clear all inputs/
 function disableBtns(){
   guessBtn.disabled = true;
   clearBtn.disabled = true;
@@ -33,11 +30,9 @@ function getRandomNumber( lower, upper ) {
 userGuess.addEventListener('keyup', function(){
   if (userGuess.value == "") {
     disableBtns();
+  }else {
+    enableBtns();
   };
-});
-
-userGuess.addEventListener('keyup', function(){
-  enableBtns();
 });
 
 clearBtn.addEventListener('click', function(){

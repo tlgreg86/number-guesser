@@ -4,6 +4,7 @@ body {
 }
 
 header {
+  font-size: 18px;
   background-color: #404041;
   width: 100%;
   height: 80px;
@@ -13,7 +14,7 @@ header {
 h1 {
   color: #e6e7e8;
   font-weight: 300;
-  padding-top: 17px;
+  padding-top: 15px;
 }
 
 span {
@@ -40,9 +41,10 @@ button {
   font-family: "Open Sans", sans-serif;
 }
 
-button:disabled {background: #d0d2d3}
-
 button:hover {background: #ed458b}
+
+button:disabled {background: #d0d2d3}*/
+
 .feedback {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
