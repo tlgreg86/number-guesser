@@ -1,0 +1,146 @@
+body {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  background-color: #404041;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+}
+
+h1 {
+  color: #e6e7e8;
+  font-weight: 300;
+  padding-top: 17px;
+}
+
+span {
+  color: #ed458b;
+  font-weight: 700;
+  padding-right:10px;
+}
+
+input {
+  width: 300px;
+  height: 35px;
+  font-size: 20px;
+  margin-top: 25px;
+  font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+  font-weight: lighter;
+  margin-bottom: 0px;
+  font-size: 25px;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+button:disabled {background: #d0d2d3}
+
+button:hover {background: #ed458b}
+.feedback {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin-top: 50px;
+}
+
+.numSubmit {
+  width: 145px;
+  height: 35px;
+  background-color: #929497;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-top: 25px;
+  color: #ffffff;
+  font-size: 20px;
+  border-style: none;
+}
+
+.numClear {
+  width: 145px;
+  height: 35px;
+  background-color: #929497;
+  border-radius: 20px;
+  margin-top: 25px;
+  color: #ffffff;
+  font-size: 20px;
+  border-style: none;
+}
+
+.gameReset {
+  margin-top: 30px;
+  width: 300px;
+  height: 35px;
+  background-color: #929497;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  border-style: none;
+}
+
+.lstGuess {
+  margin: auto;
+  width: 300px;
+  height: 150px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  font-size: 150px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  color: #ed458b;
+}
+
+@media screen and (max-width: 321px) {
+
+  header {
+    font-size: 12px;
+    height: 80px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+
+  .feedback {
+    font-size: 20px;
+  }
+
+  .lstGuess {
+    font-size: 100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .numInput {
+    font-size: 15px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .numSubmit {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .numClear {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gameReset {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
