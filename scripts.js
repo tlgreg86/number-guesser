@@ -74,6 +74,6 @@ guessBtn.addEventListener('click', function(){
   function checkInput(userGuess){
     if (Number.isNaN(parseInput) == true) {
       alert('Please enter a valid number');
-    };
+    }
   };
   });

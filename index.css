@@ -31,25 +31,13 @@ input {
   font-family: "Open Sans", sans-serif;
 }
 
-h3 {
-  font-weight: lighter;
-  margin-bottom: 0px;
-  font-size: 25px;
-}
-
 button {
   font-family: "Open Sans", sans-serif;
 }
 
 button:hover {background: #ed458b}
 
-button:disabled {background: #d0d2d3}*/
-
-.feedback {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  margin-top: 50px;
-}
+button:disabled {background: #d0d2d3}
 
 .numSubmit {
   width: 145px;
@@ -74,15 +62,10 @@ button:disabled {background: #d0d2d3}*/
   border-style: none;
 }
 
-.gameReset {
-  margin-top: 30px;
-  width: 300px;
-  height: 35px;
-  background-color: #929497;
-  border-radius: 20px;
-  color: #ffffff;
-  font-size: 20px;
-  border-style: none;
+h3 {
+  font-weight: lighter;
+  margin-bottom: 0px;
+  font-size: 25px;
 }
 
 .lstGuess {
@@ -97,28 +80,29 @@ button:disabled {background: #d0d2d3}*/
   color: #ed458b;
 }
 
+.feedback {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin-top: 50px;
+}
+
+.gameReset {
+  margin-top: 30px;
+  width: 300px;
+  height: 35px;
+  background-color: #929497;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  border-style: none;
+}
+
 @media screen and (max-width: 321px) {
 
   header {
     font-size: 12px;
     height: 80px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  h3 {
-    font-size: 20px;
-  }
-
-
-  .feedback {
-    font-size: 20px;
-  }
-
-  .lstGuess {
-    font-size: 100px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -135,11 +119,28 @@ button:disabled {background: #d0d2d3}*/
     margin-left: auto;
     margin-right: auto;
   }
+
   .numClear {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .lstGuess {
+    font-size: 100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feedback {
+    font-size: 20px;
+  }
+
   .gameReset {
     width: 100%;
     margin-left: auto;
