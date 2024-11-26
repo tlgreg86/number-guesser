@@ -4,7 +4,7 @@ A fun and interactive number guessing game built with vanilla JavaScript. Test y
 
 ## 🎮 Live Demo
 
-[Add your deployment URL here]
+https://tlgreg86.github.io/number-guesser/
 
 ![image](https://github.com/user-attachments/assets/05e973f2-0c6c-4294-ab9f-ca4916a323b4)
 
