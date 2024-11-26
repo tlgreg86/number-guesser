@@ -1,79 +1,66 @@
-var guessBtn = document.querySelector('#numSubmit');
-var clearBtn = document.querySelector('#numClear');
-var userGuess = document.querySelector('#numInput');
-var gameReset = document.querySelector('#gameReset');
-var randNumb = getRandomNumber(1,100);
+// DOM Elements
+const guessBtn = document.querySelector('#numSubmit');
+const clearBtn = document.querySelector('#numClear');
+const userGuess = document.querySelector('#numInput');
+const gameReset = document.querySelector('#gameReset');
+const feedback = document.querySelector('#feedback');
+const lastGuess = document.querySelector('#lstGuess');
+const guessLabel = document.querySelector('h3');
 
-function disableBtns(){
-  guessBtn.disabled = true;
-  clearBtn.disabled = true;
-  gameReset.disabled = true;
-};
+// Game state
+let randNumb = getRandomNumber(1, 100);
 
-function enableBtns(){
-  guessBtn.disabled = false;
-  clearBtn.disabled = false;
-  gameReset.disabled = false;
-};
+// Helper functions
+function getRandomNumber(lower, upper) {
+    return Math.floor(Math.random() * (upper - lower + 1)) + lower;
+}
 
-function clearInput(){
-  document.forms[0].reset();
-  document.querySelector('h3').innerText = '';
-  document.querySelector('#feedback').innerText = '';
-  document.querySelector('#lstGuess').innerText = '';
-};
+function updateButtonStates(disabled = true) {
+    guessBtn.disabled = disabled;
+    clearBtn.disabled = disabled;
+    gameReset.disabled = disabled;
+}
 
-function getRandomNumber( lower, upper ) {
-  return Math.floor(Math.random() * (upper - lower + 1)) + lower;
-};
+function clearInput() {
+    document.forms[0].reset();
+    guessLabel.textContent = '';
+    feedback.textContent = '';
+    lastGuess.textContent = '';
+}
 
-userGuess.addEventListener('keyup', function(){
-  if (userGuess.value == "") {
-    disableBtns();
-  }else {
-    enableBtns();
-  };
+// Event Listeners
+userGuess.addEventListener('input', (e) => {
+    updateButtonStates(!e.target.value);
 });
 
-clearBtn.addEventListener('click', function(){
-  clearInput();
+clearBtn.addEventListener('click', clearInput);
+
+gameReset.addEventListener('click', () => {
+    clearInput();
+    randNumb = getRandomNumber(1, 100);
 });
 
-gameReset.addEventListener('click', function(){
-  window.location.reload();
-});
-
-guessBtn.addEventListener('click', function(){
-  if (userGuess.value < 1 || 100 < userGuess.value) {
-    alert('Number out of range, please enter a new number')
-  }else if(userGuess.value < randNumb) {
-    document.querySelector('#feedback').innerText = 'That is too low'
-    document.querySelector('h3').innerText = 'Your last guess was'
-  }else if (userGuess.value > randNumb) {
-    document.querySelector('#feedback').innerText = 'That is too high'
-    document.querySelector('h3').innerText = 'Your last guess was'
-  }else if (userGuess.value == randNumb) {
-    document.querySelector('#feedback').innerText = 'BOOM!'
-    document.querySelector('h3').innerText = 'Your last guess was'
-  }
-});
-
-gameReset.addEventListener('click', function(){
-  clearInput();
-  randNumb = getRandomNumber(1, 100);
-  document.querySelector('#lstGuess').innerText = ''
-  document.querySelector('#feedback').innerText = ''
-});
-
-guessBtn.addEventListener('click', function(){
-  var userInput = document.querySelector('#numInput').value;
-  var parseInput = parseInt(userInput);
-  var lstGuess = document.querySelector('#lstGuess');
-  checkInput();
-  lstGuess.innerText = parseInput;
-  function checkInput(userGuess){
-    if (Number.isNaN(parseInput) == true) {
-      alert('Please enter a valid number');
+guessBtn.addEventListener('click', () => {
+    const value = parseInt(userGuess.value);
+    
+    if (isNaN(value)) {
+        alert('Please enter a valid number');
+        return;
     }
-  };
-  });
+    
+    if (value < 1 || value > 100) {
+        alert('Number out of range, please enter a number between 1 and 100');
+        return;
+    }
+    
+    lastGuess.textContent = value;
+    guessLabel.textContent = 'Your last guess was';
+    
+    if (value < randNumb) {
+        feedback.textContent = 'That is too low';
+    } else if (value > randNumb) {
+        feedback.textContent = 'That is too high';
+    } else {
+        feedback.textContent = 'BOOM!';
+    }
+});
