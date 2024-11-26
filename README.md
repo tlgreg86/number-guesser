@@ -6,7 +6,7 @@ A fun and interactive number guessing game built with vanilla JavaScript. Test y
 
 [Add your deployment URL here]
 
-![Game Screenshot](screenshot.png) <!-- You can add a screenshot of your game here -->
+![image](https://github.com/user-attachments/assets/05e973f2-0c6c-4294-ab9f-ca4916a323b4)
 
 ## ✨ Features
 
